@@ -15,15 +15,17 @@ import java.awt.event.KeyEvent;
     public int x_coordinateUpdater = 0;
     public int y_coordinateUpdater= 0;
     
-
+    public Image RedBaronDOWN1info;
     //constructor (load sprites)
+    
     public RedBaron(){
-
+      loadRedBaron();
     }
 
     //include images of RedBaron
     public void loadRedBaron(){
-
+      ImageIcon imageIcon = new ImageIcon("redBaron/RedBaronDOWN1.png");
+      RedBaronDOWN1info = imageIcon.getImage();
     }
 
     //getters
