@@ -21,6 +21,7 @@ import java.awt.event.KeyEvent;
 
     }
 
+    //include images of RedBaron
     public void loadRedBaron(){
 
     }
@@ -34,8 +35,9 @@ import java.awt.event.KeyEvent;
       return 0;
     }
 
-    //NPC(?) behavior 
 
+    //NPC(?) behavior 
+    //could be a multiplayer game or what not, purpose should be 2 sprites interacting
     public void keyPressed(KeyEvent e){
       int userKey = e.getKeyCode(); //should be randomized if NPC
 
