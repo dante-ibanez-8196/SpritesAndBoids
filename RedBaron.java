@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 /**RedBaron.java
  * A java class which includes the other sprite for the final.
- * Code structure similar to OddEye
+ * Code structure similar to OddEye (OddEye will handle the map loading so this class is shorter)
  */
 
  public class RedBaron{
@@ -17,7 +17,7 @@ import java.awt.event.KeyEvent;
     
     public Image RedBaronDOWN1info;
     //constructor (load sprites)
-    
+
     public RedBaron(){
       loadRedBaron();
     }
@@ -84,5 +84,16 @@ import java.awt.event.KeyEvent;
          System.out.println("INVALID INPUT!");
      }
     }
-    //getters for the images
+
+    //method updates finalized coordinates with the updater ones
+    /**
+     * Update the coordinates taking into account the updaters results
+     * to be called later in the WorldMap class
+     */
+    public void movePlayer(){
+      //increment the finalized with the updater
+      x_coordinateFinalized += x_coordinateUpdater;
+      y_coordinateFinalized += y_coordinateUpdater;
+  }
+
  }

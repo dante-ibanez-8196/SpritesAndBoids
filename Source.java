@@ -1,6 +1,6 @@
 /**
  * @author Dante Ibanez
- * @version 0.01
+ * @version 2.00
  */
 
 import javax.swing.*;
@@ -11,6 +11,9 @@ import java.util.Scanner;
 public class Source extends JFrame{
     //declare new OddEye player
     OddEye player = new OddEye();
+    RedBaron npc = new RedBaron();
+    //declare the other player RedBaron
+
     //main (set a constructor and method to load map through included methods
     public Source(){
         beginLoading();
@@ -22,7 +25,7 @@ public class Source extends JFrame{
     public void beginLoading(){
         //call swing included classes to set up the game environment
         add(new WorldMap());
-        setTitle("OddEye The Greater Devil Adventurer"); //game title!!
+        setTitle("OddEye II: He returns"); //game title!!
         //set the size to the input map height and width
         setSize(player.getMapHeight(), player.getMapHeight());
 

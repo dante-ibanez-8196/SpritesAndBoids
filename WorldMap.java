@@ -8,10 +8,13 @@ import java.awt.event.KeyEvent;
 /**
  * WorldMap: a new class designed to display the world map and use the OddEye player
  * Includes method calls within the awt and swing packages and associated libraries
+ * 
+ * THIS UDPATED CLASS CONTAINS CALLS FROM THE OTHER PLAYER
  */
 public class WorldMap extends JPanel implements ActionListener {
     //declare the player obj and the timer (set the delay param time to 20 below)
     public OddEye oddEyePlayer;
+    public RedBaron redBaronPlayer; //other player
     public Timer gameTimer;
 
     public Graphics2D graphics2D;
@@ -40,6 +43,7 @@ public class WorldMap extends JPanel implements ActionListener {
 
         //declare player and timer
         oddEyePlayer = new OddEye();
+        redBaronPlayer = new RedBaron();
 
         gameTimer = new Timer(20, this);
         gameTimer.start();
