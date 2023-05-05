@@ -96,7 +96,7 @@ public class WorldMap extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         moveOddEye();
-        
+        moveRedBaron();
     }
 
     /**
@@ -130,7 +130,7 @@ public class WorldMap extends JPanel implements ActionListener {
         public void keyPressed(KeyEvent e){
 
             oddEyePlayer.keyPressed(e);
-
+            redBaronPlayer.keyPressed(e);
         }
 
         /**
@@ -139,6 +139,7 @@ public class WorldMap extends JPanel implements ActionListener {
          */
         public void keyReleased(KeyEvent e){
             oddEyePlayer.keyReleased(e);
+            redBaronPlayer.keyReleased(e);
         }
     }
 }

@@ -14,8 +14,8 @@ import java.awt.event.KeyEvent;
 
     public int x_coordinateUpdater = 0;
     public int y_coordinateUpdater= 0;
-    public int x_coordinateFinalized = 0;
-    public int y_coordinateFinalized = 0;
+    public int x_coordinateFinalized = 100;
+    public int y_coordinateFinalized = 100;
     
     public Image RedBaronDOWN1Info;
     //constructor (load sprites)
@@ -32,11 +32,11 @@ import java.awt.event.KeyEvent;
 
     //getters
     public int getX_coordinate(){
-      return x_coordinateUpdater;
+      return x_coordinateFinalized;
     }
 
     public int getY_coordinate(){
-      return y_coordinateUpdater;
+      return y_coordinateFinalized;
     }
 
     public Image getRedBaronDOWN1Info(){
@@ -63,9 +63,9 @@ import java.awt.event.KeyEvent;
      else if(userKey == KeyEvent.VK_D){
          x_coordinateUpdater = 1;
      }
-     else{
+     /*else{
          System.out.println("INVALID INPUT!");
-     }
+     }*/
     }
 
     //key released
@@ -75,20 +75,20 @@ import java.awt.event.KeyEvent;
       //ifs to see where coordinates are updated
       //MOVE by 1 (flag) at a time (UP RIGHT POS/ DOWN LEFT NEG)
       if(userKey == KeyEvent.VK_W){
-         y_coordinateUpdater = -1;
+         y_coordinateUpdater = 0;
       }
      else if(userKey == KeyEvent.VK_S){
-         y_coordinateUpdater = 1;
+         y_coordinateUpdater = 0;
       }
      else if(userKey == KeyEvent.VK_A){
-         x_coordinateUpdater = -1;
+         x_coordinateUpdater = 0;
       }
      else if(userKey == KeyEvent.VK_D){
-         x_coordinateUpdater = 1;
+         x_coordinateUpdater = 0;
      }
-     else{
+     /*else{
          System.out.println("INVALID INPUT!");
-     }
+     }*/
     }
 
     //method updates finalized coordinates with the updater ones

@@ -163,9 +163,9 @@ public class OddEye {
         else if(userKey == KeyEvent.VK_RIGHT){
             x_coordinateUpdater = 1;
         }
-        else{
+        /*else{
             System.out.println("INVALID INPUT!");
-        }
+        }*/
 
         /*if(x_coordinateUpdater < 0 || y_coordinateUpdater < 0){
             System.out.println("OUT OF BOUNDS RETURN TO GAME GRID!!");
@@ -199,9 +199,9 @@ public class OddEye {
         else if(userKey == KeyEvent.VK_RIGHT){
             x_coordinateUpdater = 0;
         }
-        else{
+        /*else{
             System.out.println("INVALID INPUT!");
-        }
+        }*/
 
         /*if(x_coordinateUpdater < 0 || y_coordinateUpdater < 0){
             System.out.println("OUT OF BOUNDS RETURN TO GAME GRID!!");
