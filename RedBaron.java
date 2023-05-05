@@ -14,8 +14,10 @@ import java.awt.event.KeyEvent;
 
     public int x_coordinateUpdater = 0;
     public int y_coordinateUpdater= 0;
+    public int x_coordinateFinalized = 0;
+    public int y_coordinateFinalized = 0;
     
-    public Image RedBaronDOWN1info;
+    public Image RedBaronDOWN1Info;
     //constructor (load sprites)
 
     public RedBaron(){
@@ -25,16 +27,20 @@ import java.awt.event.KeyEvent;
     //include images of RedBaron
     public void loadRedBaron(){
       ImageIcon imageIcon = new ImageIcon("redBaron/RedBaronDOWN1.png");
-      RedBaronDOWN1info = imageIcon.getImage();
+      RedBaronDOWN1Info = imageIcon.getImage();
     }
 
     //getters
     public int getX_coordinate(){
-      return 0;
+      return x_coordinateUpdater;
     }
 
     public int getY_coordinate(){
-      return 0;
+      return y_coordinateUpdater;
+    }
+
+    public Image getRedBaronDOWN1Info(){
+      return RedBaronDOWN1Info;
     }
 
 
@@ -45,16 +51,16 @@ import java.awt.event.KeyEvent;
 
       //ifs to see where coordinates are updated
       //MOVE by 1 (flag) at a time (UP RIGHT POS/ DOWN LEFT NEG)
-      if(userKey == KeyEvent.VK_UP){
+      if(userKey == KeyEvent.VK_W){
          y_coordinateUpdater = -1;
       }
-     else if(userKey == KeyEvent.VK_DOWN){
+     else if(userKey == KeyEvent.VK_S){
          y_coordinateUpdater = 1;
       }
-     else if(userKey == KeyEvent.VK_LEFT){
+     else if(userKey == KeyEvent.VK_A){
          x_coordinateUpdater = -1;
       }
-     else if(userKey == KeyEvent.VK_RIGHT){
+     else if(userKey == KeyEvent.VK_D){
          x_coordinateUpdater = 1;
      }
      else{
@@ -68,16 +74,16 @@ import java.awt.event.KeyEvent;
 
       //ifs to see where coordinates are updated
       //MOVE by 1 (flag) at a time (UP RIGHT POS/ DOWN LEFT NEG)
-      if(userKey == KeyEvent.VK_UP){
+      if(userKey == KeyEvent.VK_W){
          y_coordinateUpdater = -1;
       }
-     else if(userKey == KeyEvent.VK_DOWN){
+     else if(userKey == KeyEvent.VK_S){
          y_coordinateUpdater = 1;
       }
-     else if(userKey == KeyEvent.VK_LEFT){
+     else if(userKey == KeyEvent.VK_A){
          x_coordinateUpdater = -1;
       }
-     else if(userKey == KeyEvent.VK_RIGHT){
+     else if(userKey == KeyEvent.VK_D){
          x_coordinateUpdater = 1;
      }
      else{

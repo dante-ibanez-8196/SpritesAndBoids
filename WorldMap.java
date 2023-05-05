@@ -82,6 +82,10 @@ public class WorldMap extends JPanel implements ActionListener {
         graphics2D.drawImage(oddEyePlayer.getOddEyeDOWN1Info(), oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), this);
         graphics2D.drawImage(oddEyePlayer.getOddEyeDOWN2Info(), oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), this);
 
+        //red baron
+        //graphics2D.drawImage(redBaronPlayer.getRed, null, ALLBITS, ABORT);
+        graphics2D.drawImage(redBaronPlayer.getRedBaronDOWN1Info(), redBaronPlayer.getX_coordinate(), redBaronPlayer.getY_coordinate(), this);
+
     }
     //call to move player
 
@@ -92,6 +96,7 @@ public class WorldMap extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         moveOddEye();
+        
     }
 
     /**
@@ -104,6 +109,13 @@ public class WorldMap extends JPanel implements ActionListener {
         repaint(oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), oddEyePlayer.getMapWidth(), oddEyePlayer.getMapHeight());
     }
 
+    //new redbaron move class
+    public void moveRedBaron(){
+        //call move and repaint (call oddeye for map info as it's saved there)
+        redBaronPlayer.movePlayer();
+
+        repaint(redBaronPlayer.getX_coordinate(), redBaronPlayer.getY_coordinate(), oddEyePlayer.getMapWidth(), oddEyePlayer.getMapHeight());
+    }
     //declare a new class to handle keyboard inputs (call from oddeye)
     //trigger if key has been pressed or released
 
