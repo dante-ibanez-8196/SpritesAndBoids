@@ -107,6 +107,7 @@ public class WorldMap extends JPanel implements ActionListener {
         oddEyePlayer.movePlayer();
 
         repaint(oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), oddEyePlayer.getMapWidth(), oddEyePlayer.getMapHeight());
+        System.out.println("Coordinates ODDEYE : (" +oddEyePlayer.getX_coordinate() + "," +oddEyePlayer.getY_coordinate() +")");
     }
 
     //new redbaron move class
@@ -115,6 +116,17 @@ public class WorldMap extends JPanel implements ActionListener {
         redBaronPlayer.movePlayer();
 
         repaint(redBaronPlayer.getX_coordinate(), redBaronPlayer.getY_coordinate(), oddEyePlayer.getMapWidth(), oddEyePlayer.getMapHeight());
+        System.out.println("Coordinates REDBARON : (" +redBaronPlayer.getX_coordinate() + "," +redBaronPlayer.getY_coordinate() +")");
+
+    }
+
+    //new class to determine if both sprites collide
+    public void playersCollide(){
+        //if statement to check if coordinates for both players are equal (touching each other), then display they touched
+        if((redBaronPlayer.getX_coordinate() == oddEyePlayer.getX_coordinate()) && (redBaronPlayer.getY_coordinate() == oddEyePlayer.getY_coordinate())){
+            //println debugging
+            System.out.println("PLAYERS HAS TOUCHED EACH OTHER!!");
+        }
     }
     //declare a new class to handle keyboard inputs (call from oddeye)
     //trigger if key has been pressed or released
