@@ -5,7 +5,6 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Scanner;
 
 
 public class Source extends JFrame{
@@ -42,14 +41,6 @@ public class Source extends JFrame{
         EventQueue.invokeLater(() -> {Source sourceObj = new Source(); sourceObj.setVisible(true);});
         //print out to terminal for debugging/confirmation to the user, manual quits
         System.out.println("Welcome to the game. These system outs are for debugging/confirmation of the game running.");
-        System.out.println("If you wish to kill this program, type QUIT to QUIT program.");
-        Scanner userInput = new Scanner(System.in);
-        String quitCommand = userInput.nextLine();
-        String quitGame = "QUIT";
-        System.out.println("Input: " +quitGame); //debugging remove later
-        //quit via user command
-        if(quitCommand.equals(quitGame)){
-            System.exit(0);
-        }
+        System.out.println("If you wish to kill this program, close the java window or kill this program here.");
     }
 }
