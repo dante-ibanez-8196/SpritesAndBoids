@@ -7,3 +7,8 @@ I compiled and ran this program on Microsoft's Visual Studio Code editor with ne
 # Game instructions
 This is a multiplayer based game that will run on its own Java Window. To move player OddEye, use the arrow keys. To move Red Baron, use the WASD cluster.
 If you wish to terminate the game, you can close the Java Window or kill the program through the terminal using CRTL + C.
+
+# Special notes
+`System.out.println()` statements have been left over for the console for debugging purposes. When the players collide with
+each other (in this case it's at the same coordinates), an explosion will briefly appear. Try colliding them to see the
+explosion.
