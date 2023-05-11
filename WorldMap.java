@@ -97,17 +97,21 @@ public class WorldMap extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         moveOddEye();
         moveRedBaron();
+        playersCollide();
     }
 
     /**
      * moveOddEye: call included move method form player and repaint
      */
+
+    //TEMP MAKE THESE RETURN A VALUE
     public void moveOddEye(){
         //call move and repaint
         oddEyePlayer.movePlayer();
 
         repaint(oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), oddEyePlayer.getMapWidth(), oddEyePlayer.getMapHeight());
         System.out.println("Coordinates ODDEYE : (" +oddEyePlayer.getX_coordinate() + "," +oddEyePlayer.getY_coordinate() +")");
+
     }
 
     //new redbaron move class
@@ -128,6 +132,7 @@ public class WorldMap extends JPanel implements ActionListener {
             System.out.println("PLAYERS HAS TOUCHED EACH OTHER!!");
         }
     }
+
     //declare a new class to handle keyboard inputs (call from oddeye)
     //trigger if key has been pressed or released
 
