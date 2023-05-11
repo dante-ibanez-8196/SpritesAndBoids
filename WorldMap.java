@@ -15,8 +15,10 @@ public class WorldMap extends JPanel implements ActionListener {
     //declare the player obj and the timer (set the delay param time to 20 below)
     public OddEye oddEyePlayer;
     public RedBaron redBaronPlayer; //other player
+    public Explosion explosion; //explosion when players hit
     public Timer gameTimer;
 
+    public Graphics explosionGraphics;
     public Graphics2D graphics2D;
 
     Image gameImage;
@@ -44,6 +46,7 @@ public class WorldMap extends JPanel implements ActionListener {
         //declare player and timer
         oddEyePlayer = new OddEye();
         redBaronPlayer = new RedBaron();
+        explosion = new Explosion();
 
         gameTimer = new Timer(20, this);
         gameTimer.start();
@@ -60,6 +63,7 @@ public class WorldMap extends JPanel implements ActionListener {
         //look up graphics associated classes
         super.paintComponent(graphics);
         loadTheContent(graphics); //load content via drawImage() below
+        displayTheExplosion(graphics);
     }
 
     /**
@@ -86,6 +90,7 @@ public class WorldMap extends JPanel implements ActionListener {
         //graphics2D.drawImage(redBaronPlayer.getRed, null, ALLBITS, ABORT);
         graphics2D.drawImage(redBaronPlayer.getRedBaronDOWN1Info(), redBaronPlayer.getX_coordinate(), redBaronPlayer.getY_coordinate(), this);
 
+        //graphics2D.drawImage(explosion.explosionInfo(), explosion.getX_coordinate(), explosion.getY_coordinate(), null);
     }
     //call to move player
 
@@ -130,6 +135,18 @@ public class WorldMap extends JPanel implements ActionListener {
         if((redBaronPlayer.getX_coordinate() == oddEyePlayer.getX_coordinate()) && (redBaronPlayer.getY_coordinate() == oddEyePlayer.getY_coordinate())){
             //println debugging
             System.out.println("PLAYERS HAS TOUCHED EACH OTHER!!");
+            //call to place explosion
+            displayTheExplosion(explosionGraphics);
+        }
+    }
+
+    public void displayTheExplosion(Graphics graphics){
+        //if statement to check if coordinates for both players are equal (touching each other), then display they touched
+        if((redBaronPlayer.getX_coordinate() == oddEyePlayer.getX_coordinate()) && (redBaronPlayer.getY_coordinate() == oddEyePlayer.getY_coordinate())){
+            //println debugging
+            System.out.println("PLAYERS HAS TOUCHED EACH OTHER!!");
+            //call to place explosion
+            graphics2D.drawImage(explosion.explosionInfo(), oddEyePlayer.getX_coordinate(), oddEyePlayer.getY_coordinate(), null);
         }
     }
 

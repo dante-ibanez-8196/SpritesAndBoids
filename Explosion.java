@@ -26,6 +26,10 @@ public class Explosion{
     }
 
     public int getY_coordinate(){
-        return getY_coordinate();
+        return y_coordinate;
+    }
+
+    public Image explosionInfo(){
+        return explosionInfo;
     }
 }
