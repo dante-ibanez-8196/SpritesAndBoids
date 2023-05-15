@@ -1,5 +1,5 @@
 # SpritesAndBoids
-Final project for CS 485. A program which involves multiple sprites and boids.
+Final project for CS 485. A program which involves multiple sprites (and boids if possibl).
 
 # Running the program
 I compiled and ran this program on Microsoft's Visual Studio Code editor with necessary Java plugins and extensions. If you are running this program on a zsh or unix terminal, type `javac Source.java` to compile the program and `java Source.java` to run the program assuming you have clone this repository.

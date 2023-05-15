@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.Image;
 
 /**Explosion.java
- * A small java class to handle the explosion sprite
+ * A small java class to handle the explosion sprite (this is to be displayed when players collide)
  */
 public class Explosion{
     //declare GLOBAL variables
@@ -16,11 +16,13 @@ public class Explosion{
         loadExplosion();
     }
 
+    //get the image from the source
     public void loadExplosion(){
         ImageIcon explosionIcon = new ImageIcon("resources/explosion.gif");
         explosionInfo = explosionIcon.getImage();
     }
 
+    //same getters from previous classes
     public int getX_coordinate(){
         return x_coordinate;
     }

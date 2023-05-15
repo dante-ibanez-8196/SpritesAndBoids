@@ -9,7 +9,7 @@ import java.awt.event.KeyEvent;
 
  public class RedBaron{
     //declare GLOBAL variables
-
+    //set begin coordinates as well
     public int x_coordinateUpdater = 0;
     public int y_coordinateUpdater= 0;
     public int x_coordinateFinalized = 100;
@@ -42,8 +42,7 @@ import java.awt.event.KeyEvent;
     }
 
 
-    //NPC(?) behavior 
-    //could be a multiplayer game or what not, purpose should be 2 sprites interacting
+    //control movement of 2nd player (WASD cluster)
     public void keyPressed(KeyEvent e){
       int userKey = e.getKeyCode(); //should be randomized if NPC
 
