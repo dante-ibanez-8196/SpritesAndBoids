@@ -83,9 +83,7 @@ import java.awt.event.KeyEvent;
      else if(userKey == KeyEvent.VK_D){
          x_coordinateUpdater = 0;
      }
-     /*else{
-         System.out.println("INVALID INPUT!");
-     }*/
+
     }
 
     //method updates finalized coordinates with the updater ones
